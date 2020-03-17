@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="hello" class="com.soft1851.spring.ioc.entity.Hello">
+</bean>
+    <bean id="sort" class="com.soft1851.spring.ioc.entity.Sort"/>
+
+    <bean id="phone" class="com.soft1851.spring.ioc.entity.Phone">
+        <constructor-arg name="brand" value="iPhone11"/>
+        <constructor-arg name="price" value="9999.99"/>
+    </bean>
+
+    <bean id="phone1" class="com.soft1851.spring.ioc.entity.Phone">
+        <property name="brand" value="iphone8"/>
+        <property name="price" value="5000.00"/>
+    </bean>
+
+    <bean id="student" class="com.soft1851.spring.ioc.entity.Student">
+        <property name="name" value="王欢乐"/>
+        <property name="phone" ref="phone"/>
+    </bean>
+
+    <bean id="user" class="com.soft1851.spring.ioc.entity.User">
+        <property name="account" value="admin"></property>
+        <property name="password" value="111"></property>
+    </bean>
+
+    <bean id="userLogin" class="com.soft1851.spring.ioc.entity.UserLogin">
+        <property name="admin" ref="user"></property>
+    </bean>
+
+</beans>
