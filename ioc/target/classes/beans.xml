@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.soft1851.spring.ioc.config"/>
 <bean id="hello" class="com.soft1851.spring.ioc.entity.Hello">
 </bean>
     <bean id="sort" class="com.soft1851.spring.ioc.entity.Sort"/>
@@ -37,6 +39,13 @@
                 <bean id="phone1" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iphone11" p:price="6666"/>
                 <bean id="phone2" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iphonex" p:price="8888"/>
             </list>
+        </property>
+        <property name="scores">
+            <map>
+                <entry key="语文" value="88" />
+                <entry key="数学" value="87" />
+                <entry key="外语" value="88" />
+            </map>
         </property>
     </bean>
 

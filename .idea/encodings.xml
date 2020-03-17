@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aop" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ioc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ioc/src/test/java/com/soft1851/spring/ioc/dao/ForumDaoTest.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/orm" charset="UTF-8" />
   </component>
 </project>
