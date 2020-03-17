@@ -16,10 +16,10 @@
         <property name="price" value="5000.00"/>
     </bean>
 
-    <bean id="student" class="com.soft1851.spring.ioc.entity.Student">
-        <property name="name" value="王欢乐"/>
-        <property name="phone" ref="phone"/>
-    </bean>
+<!--    <bean id="student" class="com.soft1851.spring.ioc.entity.Student">-->
+<!--        <property name="name" value="王欢乐"/>-->
+<!--        <property name="phone" ref="phone"/>-->
+<!--    </bean>-->
 
     <bean id="user" class="com.soft1851.spring.ioc.entity.User">
         <property name="account" value="admin"></property>
@@ -28,6 +28,17 @@
 
     <bean id="userLogin" class="com.soft1851.spring.ioc.entity.UserLogin">
         <property name="admin" ref="user"></property>
+    </bean>
+    <bean id="student" class="com.soft1851.spring.ioc.entity.Student">
+        <property name="name" value="Tom"/>
+        <property name="age" value="20"/>
+        <property name="phones">
+            <list>
+                <value>iphone 5</value>
+                <value>iphone 6</value>
+                <value>iphone 11</value>
+            </list>
+        </property>
     </bean>
 
 </beans>
