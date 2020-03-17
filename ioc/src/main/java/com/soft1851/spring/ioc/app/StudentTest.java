@@ -15,6 +15,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 public class StudentTest {
     private static Logger logger = LoggerFactory.getLogger(StudentTest.class);
+    
     public static void main(String[] args) {
         ApplicationContext ac = new ClassPathXmlApplicationContext("beans.xml");
         Student student = (Student) ac.getBean("student");
