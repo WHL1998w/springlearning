@@ -3,16 +3,18 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<!--    在xml配置文件中手动开启扫包操作-->
     <context:component-scan base-package="com.soft1851.spring.ioc.config"/>
 <bean id="hello" class="com.soft1851.spring.ioc.entity.Hello">
 </bean>
     <bean id="sort" class="com.soft1851.spring.ioc.entity.Sort"/>
 
+<!--    构造器注入-->
     <bean id="phone" class="com.soft1851.spring.ioc.entity.Phone">
         <constructor-arg name="brand" value="iPhone11"/>
         <constructor-arg name="price" value="9999.99"/>
     </bean>
-
+<!--setter注入-->
     <bean id="phone1" class="com.soft1851.spring.ioc.entity.Phone">
         <property name="brand" value="iphone8"/>
         <property name="price" value="5000.00"/>
@@ -36,6 +38,7 @@
         <property name="age" value="20"/>
         <property name="phones">
             <list>
+<!--                setter注入的简写-->
                 <bean id="phone1" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iphone11" p:price="6666"/>
                 <bean id="phone2" class="com.soft1851.spring.ioc.entity.Phone" p:brand="iphonex" p:price="8888"/>
             </list>

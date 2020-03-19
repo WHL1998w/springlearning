@@ -23,7 +23,7 @@ public class PhoneTest {
         //ctx.refresh();
         Phone phone = (Phone) ctx.getBean("phone");
         phone.setBrand("iphone 11");
-        phone.setPrice(88.8);
+        phone.setPrice(8888.8);
         System.out.println(phone);
     }
 }
